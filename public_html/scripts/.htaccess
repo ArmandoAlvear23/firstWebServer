@@ -1,0 +1,11 @@
+# HTID:5736406: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:5736406:
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{Request_URI}[L,R=301]
+
+<Limit GET>
+deny from all
+</Limit>
